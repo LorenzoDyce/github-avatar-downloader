@@ -1,4 +1,4 @@
 secrets.js
 avatars/
-node_modules/
+node_modules
 .env
