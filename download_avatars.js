@@ -13,7 +13,7 @@ if(args[1] == null)
 
 console.log('Welcome to the GitHub Avatar Downloader!');
 
-
+// This will function will fetch data from the Github Api
 function getRepoContributors(repoHolder, repoName, cb) {
  var options = {
     url: "https://api.github.com/repos/" + repoHolder + "/" + repoName + "/contributors",
@@ -37,7 +37,7 @@ function getRepoContributors(repoHolder, repoName, cb) {
    });
 }
 
-
+// Get the photos of the contributors
 getRepoContributors(holder, filePathing, function(err, result) {
   if(err){
     console.log("Errors:", err);
@@ -52,7 +52,7 @@ getRepoContributors(holder, filePathing, function(err, result) {
 });
 
 
-
+// file Downloader
 function downloadImageByURL(url, filePath) {
 
   console.log("filePath:", filePath);
@@ -66,6 +66,5 @@ function downloadImageByURL(url, filePath) {
          console.log('Response Status Code: ', response.statusCode);
        })
        .pipe(fs.createWriteStream(filePath));
-       console.log('Download complete.');
-  // ...
+       console.log('Download is complete.');
 }
