@@ -66,5 +66,5 @@ function downloadImageByURL(url, filePath) {
          console.log('Response Status Code: ', response.statusCode);
        })
        .pipe(fs.createWriteStream(filePath));
-       console.log('Download is complete.');
+       console.log('Download is Complete.');
 }
